@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>MyWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 만약 FirstFilter, SecondFilter를 순서대로 동작시키려면 web.xml에 선언합니다. -->
+  
+  <!-- 필터 등록 -->
+  <filter>
+  	<filter-name>first</filter-name>
+  	<filter-class>com.myweb.util.filter.FirstFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>second</filter-name>
+  	<filter-class>com.myweb.util.filter.SecondFilter</filter-class>
+  </filter>
+  
+  <!-- 필터 url등록 -->
+  <!--
+  <filter-mapping>
+  	<filter-name>first</filter-name>
+  	<url-pattern>/board/list.board</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>second</filter-name>
+  	<url-pattern>/board/list.board</url-pattern>
+  </filter-mapping>
+  -->
+  
+</web-app>
